@@ -10,6 +10,7 @@ export default defineConfig({
     watch: false,
     coverage: {
       provider: "v8",
+      reporter: ["text", "html", "clover", "json", "json-summary"],
       include: ["packages"],
       exclude: [
         "**/dist",
