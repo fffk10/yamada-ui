@@ -1,7 +1,10 @@
+import path from "path"
 import * as p from "@clack/prompts"
 import c from "chalk"
 import type { DefaultOptions } from "../../utils"
 import { getConfig } from "../../utils/config"
+import { copyDirectry } from "./copy-directory"
+import { resolveSourcePath } from "./resolve-source-path"
 
 type Options = DefaultOptions & {}
 
@@ -14,17 +17,20 @@ export default (hex: string) =>
     try {
       const start = process.hrtime.bigint()
 
-      const componentName = componentNames[0]
-
-      s.start(`Generating the ${componentName}`)
-
       const config = await getConfig(cwd, configPath)
+      const dirPath = config.options.dirPath
 
-      console.log(config)
+      for (const componentName of componentNames) {
+        s.start(`Generating the ${componentName}`)
 
-      p.note(componentName, "Component name")
+        const sourcePath = await resolveSourcePath(componentName)
+        const outputPath = path.resolve(process.cwd(), dirPath, componentName)
+        copyDirectry(sourcePath, outputPath)
 
-      s.stop(`Generated the ${componentName}`)
+        p.note(componentName, "Component name")
+
+        s.stop(`Generated the ${componentName}`)
+      }
 
       const end = process.hrtime.bigint()
       const duration = (Number(end - start) / 1e9).toFixed(2)
