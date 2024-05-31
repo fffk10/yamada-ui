@@ -39,7 +39,7 @@
       "description": "The infinite scroll area loading to use."
     },
     "onLoad": {
-      "type": "({\n  index,\n  entry,\n  finish,\n}: {\n  index: number\n  finish: () => void\n  entry?: IntersectionObserverEntry | undefined\n}) => Promise<void>",
+      "type": "({\n  index,\n  entry,\n  finish,\n}: {\n  index: number\n  finish: () => void\n  entry?: IntersectionObserverEntry | undefined\n}) => void | Promise<void>",
       "required": false,
       "description": "The callback invoked when trigger is intersect."
     },
