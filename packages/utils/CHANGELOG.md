@@ -1,5 +1,11 @@
 # @yamada-ui/utils
 
+## 2.0.0
+
+### Major Changes
+
+- [#1684](https://github.com/yamada-ui/yamada-ui/pull/1684) [`5ec5a23`](https://github.com/yamada-ui/yamada-ui/commit/5ec5a231cc134a280eeb7841f99348c74cd4b948) Thanks [@yasuaki640](https://github.com/yasuaki640)! - Fixed isRefObject to return false if null or undefined is passed.
+
 ## 1.2.0
 
 ### Minor Changes

@@ -1,5 +1,24 @@
 # @yamada-ui/calendar
 
+## 1.3.2
+
+### Patch Changes
+
+- [#1707](https://github.com/yamada-ui/yamada-ui/pull/1707) [`ecc22f8`](https://github.com/yamada-ui/yamada-ui/commit/ecc22f8e4f46b7f2821524c3554fe4770f15de07) Thanks [@illionillion](https://github.com/illionillion)! - add optional chaining
+
+- Updated dependencies [[`5ec5a23`](https://github.com/yamada-ui/yamada-ui/commit/5ec5a231cc134a280eeb7841f99348c74cd4b948)]:
+  - @yamada-ui/utils@2.0.0
+  - @yamada-ui/button@1.0.30
+  - @yamada-ui/form-control@1.1.2
+  - @yamada-ui/icon@1.0.27
+  - @yamada-ui/popover@1.2.1
+  - @yamada-ui/portal@1.0.15
+  - @yamada-ui/core@1.7.1
+  - @yamada-ui/use-clickable@1.2.2
+  - @yamada-ui/use-controllable-state@1.0.14
+  - @yamada-ui/use-disclosure@1.0.14
+  - @yamada-ui/use-outside-click@1.0.14
+
 ## 1.3.1
 
 ### Patch Changes
